@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        /* Reset and base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #f0e8df;
+            color: #4b3c31;
+            text-align: center;
+            height: 100%;
+        }
+
+        /* Header */
+        #name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 10px;
+
+        }
+
+        #name h1 {
+            font-size: 40px;
+            font-weight: bold;
+            max-width: 80%;
+        }
+
+        .logo {
+            width: 140px;
+            position: absolute;
+            top: 0;
+            right: 0px;
+            border-radius: 100%;
+            cursor: pointer;
+            border: 2px solid rgb(17, 139, 17);
+        }
+
+
+
+        /* Profile section */
+        section figure {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        figure img {
+            width: 400px;
+            height: 500px;
+            border-radius: 100%;
+            border: 8px solid white;
+            margin-top: 100px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        figcaption {
+            max-width: 600px;
+            text-align: left;
+            font-size: 22px;
+            line-height: 1.8;
+        }
+
+        figcaption h1 {
+            font-size: 150px;
+            font-weight: bold;
+            margin-top: -150px;
+            margin-bottom: -40px;
+
+        }
+
+        /* Navigation buttons */
+        nav {
+            margin-top: -200px;
+            margin-bottom: 210px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-left: 250px;
+            margin-top: 20px;
+        }
+
+        nav li {
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: black;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Button colors */
+        .education {
+            background-color: #f68888;
+        }
+
+        .projects {
+            background-color: #f9c88f;
+        }
+
+        .contacts {
+            background-color: #9ee9eb;
+        }
+
+        nav a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer section */
+        footer {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .social-icons img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            border: 2px solid rgb(17, 139, 17);
+
+        }
+
+        .llogo:hover {
+            transform: scale(1.1);
+        }
+
+        .watermark {
+            width: 40px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: 20px;
+            display: block;
+        }
+
+        @keyframes fadeInPageLoad {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(0);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+        section,
+        nav,
+        footer {
+
+            animation: fadeInPageLoad 1s ease-in-out;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section id="name">
+        <h1>DEL ROSARIO, LORENZO MIGUEL M.</h1>
+    </section>
+    <a href="index.html">
+        <img src="pictures/drawing.png" alt="logo" width="300" class="logo">
+    </a>
+
+    <section id="profile">
+        <figure>
+            <img src="pictures/me.png" alt="picture of enzo" width="300">
+            <figcaption>
+                <h1>HELLO,</h1>I am an BSIT student with experience in coding and various IT tasks. I am also eager to
+                learn
+                more about other areas in IT that I do not know right now.
+            </figcaption>
+        </figure>
+    </section>
+
+    <nav>
+        <ul>
+            <li><a href="education.html" style="background-color: #f67280;">EDUCATION</a></li>
+            <li><a href="project.html" style="background-color: #ffd166;">PROJECTS</a></li>
+            <li><a href="contact.html" style="background-color: #a8edea;">CONTACTS</a></li>
+        </ul>
+    </nav>
+
+
+    <footer>
+        <img src="pictures/watermark.png" alt="watermark" class="watermark">
+        <div class="social-container">
+            <p>FOLLOW ME ON:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/lorenzomiguel.delrosario" target="_blank">
+                    <img src="pictures/fb.png" class="llogo" alt="fb logo">
+                </a>
+                <a href="https://www.instagram.com/luckyenzoo/" target="_blank">
+                    <img src="pictures/ig.png" class="llogo" alt="ig logo">
+                </a>
+                <a href="https://x.com/lmdelr" target="_blank">
+                    <img src="pictures/x.png" class="llogo" alt="x logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

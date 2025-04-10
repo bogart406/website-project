@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #f0e8df;
+            color: #4b3c31;
+            text-align: center;
+            height: 100%;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 100px;
+            font-weight: bold;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo {
+            width: 140px;
+            position: absolute;
+            top: 0;
+            right: 0px;
+            border-radius: 100%;
+            cursor: pointer;
+            border: 3px solid rgb(151, 190, 114);
+        }
+
+        #calculator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        figure {
+            margin: 40px auto;
+            max-width: 800px;
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+            border: 2px solid rgb(151, 190, 114);
+            transition: transform 0.3s ease;
+        }
+
+        figure img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        figcaption {
+
+            max-width: 600px;
+            text-align: left;
+            font-size: 22px;
+            line-height: 1.8;
+        }
+
+        /* Navigation Bar */
+        nav {
+            margin-top: auto;
+            margin-bottom: 210px;
+
+
+        }
+
+        nav ul li a {
+            position: relative;
+            text-decoration: none;
+            color: #4b3c31;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 15px;
+            display: inline-block;
+
+        }
+
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 13px;
+            transform: translateX(10%);
+            left: 2%;
+            height: 2px;
+            width: 0;
+            background-color: #4b3c31;
+            transition: width 0.3s ease-in;
+        }
+
+        nav ul li a:hover::after {
+            width: 80%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 15px 0;
+            border-bottom: 3px solid black;
+        }
+
+        nav li {
+            list-style: none;
+            flex: 1;
+            text-align: center;
+            align-items: center;
+            border-right: 3px solid black;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .social-icons img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            border: 3px solid rgb(151, 190, 114);
+
+        }
+
+        .llogo:hover {
+            transform: scale(1.1);
+        }
+
+        .watermark {
+            width: 40px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: 20px;
+            display: block;
+        }
+
+        @keyframes fadeInPageLoad {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(0);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+        section,
+        footer,
+        .logo {
+
+            animation: fadeInPageLoad 1s ease-in-out;
+
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            figcaption {
+                font-size: 18px;
+            }
+
+            nav ul li a {
+                font-size: 20px;
+            }
+
+            nav li {
+                font-size: 20px;
+            }
+
+            .social-icons img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">PROFILE</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+            <li><a href="project.html">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACTS</a></li>
+        </ul>
+</head>
+
+<body>
+    <a href="index.html">
+        <img src="pictures/drawing.png" alt="logo" width="500" class="logo">
+    </a>
+
+
+    <section id="project-gallery">
+        <figure id="calculator">
+
+            <img src="pictures/calc.PNG" alt="calculator" width="300">
+            <figcaption>
+                <h1>PROJECT 1</h1>This is a picture of the calculator I coded in my first semester as a first-year
+                student. It was
+                a great way to practice my programming skills and apply what I was learning in class.
+            </figcaption>
+        </figure>
+
+        <figure id="calculator">
+            <img src="pictures/grade.PNG" alt="calculator of grades" width="300">
+            <figcaption>
+                <h1>PROJECT 2</h1> This is a calculation of grades designed to determine whether a student has
+                passed
+                the subject
+                or not. It takes into account various assessments and criteria to ensure an accurate evaluation of
+                their
+                performance.
+            </figcaption>
+        </figure>
+
+        <figure id="calculator">
+            <img src="pictures/grades.PNG" alt="calculator of grades average" width="300">
+            <figcaption>
+                <h1>PROJECT 3</h1>In this picture you can see that this is a calculator of grades average, lowest,
+                and
+                highest
+                grade of the student. This also include the counting of passed students and failed students in a
+                specific subject.
+            </figcaption>
+        </figure>
+    </section>
+    <footer>
+        <img src="pictures/watermark.png" alt="watermark" class="watermark">
+        <div class="social-container">
+            <p>FOLLOW ME ON:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/lorenzomiguel.delrosario" target="_blank">
+                    <img src="pictures/fb.png" class="llogo" alt="fb logo">
+                </a>
+                <a href="https://www.instagram.com/luckyenzoo/" target="_blank">
+                    <img src="pictures/ig.png" class="llogo" alt="ig logo">
+                </a>
+                <a href="https://x.com/lmdelr" target="_blank">
+                    <img src="pictures/x.png" class="llogo" alt="x logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

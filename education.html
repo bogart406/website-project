@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #f0e8df;
+            color: #4b3c31;
+            text-align: center;
+            height: 100%;
+        }
+
+        .logo {
+            width: 140px;
+            position: absolute;
+            top: 0;
+            right: 0px;
+            border-radius: 100%;
+            cursor: pointer;
+            border: 3px solid rgb(151, 190, 114);
+            background-color: white;
+        }
+
+        .education-section {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+
+        }
+
+        .education-section img {
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            border: 3px solid rgb(151, 190, 114);
+            background-color: white;
+        }
+
+        .school-block {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+
+        .school-block figcaption {
+            font-size: 25px;
+            font-weight: bold;
+            color: #003399;
+            max-width: 500px;
+        }
+
+        footer {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /*  Navigation Bar */
+        nav {
+            margin-top: auto;
+            margin-bottom: 50px;
+
+
+        }
+
+        nav ul li a {
+            position: relative;
+            text-decoration: none;
+            color: #4b3c31;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 15px;
+            display: inline-block;
+
+        }
+
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 13px;
+            transform: translateX(10%);
+            left: 2%;
+            height: 2px;
+            width: 0;
+            background-color: #4b3c31;
+            transition: width 0.3s ease-in;
+        }
+
+        nav ul li a:hover::after {
+            width: 80%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 15px 0;
+            border-bottom: 3px solid black;
+        }
+
+        nav li {
+            list-style: none;
+            flex: 1;
+            text-align: center;
+            align-items: center;
+            border-right: 3px solid black;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Move logo to top-right corner above nav */
+        .logo {
+            width: 140px;
+            position: absolute;
+            top: 0;
+            right: 0px;
+            border-radius: 100%;
+            cursor: pointer;
+            border: 2px solid rgb(151, 190, 114);
+        }
+
+
+        .social-icons img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            border: 2px solid rgb(151, 190, 114);
+        }
+
+        .llogo:hover {
+            transform: scale(1.1);
+        }
+
+        .watermark {
+            width: 40px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: 20px;
+            display: block;
+        }
+
+        @keyframes fadeInPageLoad {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(0);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+        section,
+        .logo,
+        footer {
+
+            animation: fadeInPageLoad 1s ease-in-out;
+
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            figcaption {
+                font-size: 18px;
+            }
+
+            nav ul li a {
+                font-size: 20px;
+            }
+
+            nav li {
+                font-size: 20px;
+            }
+
+            .social-icons img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+    <nav>
+        <ul>
+            <li><a href="index.html">PROFILE</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+            <li><a href="project.html">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACTS</a></li>
+        </ul>
+    </nav>
+</head>
+
+<body>
+    <figure>
+        <a href="index.html">
+            <img src="pictures/drawing.png" alt="logo" class="logo" />
+        </a>
+
+        <section class="education-section">
+            <figure class="school-block">
+                <img src="pictures/inb.png" alt="inbcs picture" />
+                <figcaption>STUDIED AT INA NG BUHAY CATHOLIC SCHOOL</figcaption>
+            </figure>
+
+            <figure class="school-block">
+                <img src="pictures/olfu.png" alt="olfu picture" />
+                <figcaption>CURRENTLY STUDYING AT OUR LADY OF FATIMA UNIVERSITY</figcaption>
+            </figure>
+        </section>
+
+
+        <footer>
+            <img src="pictures/watermark.png" alt="watermark" class="watermark">
+            <div class="social-container">
+                <p>FOLLOW ME ON:</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/lorenzomiguel.delrosario" target="_blank">
+                        <img src="pictures/fb.png" class="llogo" alt="fb logo">
+                    </a>
+                    <a href="https://www.instagram.com/luckyenzoo/" target="_blank">
+                        <img src="pictures/ig.png" class="llogo" alt="ig logo">
+                    </a>
+                    <a href="https://x.com/lmdelr" target="_blank">
+                        <img src="pictures/x.png" class="llogo" alt="x logo">
+                    </a>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
